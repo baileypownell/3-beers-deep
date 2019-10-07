@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-
+  scalable=yes">
+  <meta name="author" content="Bailey Pownell">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Three Beers Deep: Alt rock grunge band from Peru, Indiana</title>
+  <link rel="icon" href="images/logo.jpg">
+  <meta name="description" content="Alt rock grunge band from Peru, Indiana">
+  <meta name="image" property="og:image" content="images/code.jpg">
+  <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Big+Shoulders+Text|Rubik+Mono+One&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/83f61b13a6.js" crossorigin="anonymous"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+</head>
+<body>
+  <nav>
+    <img src="images/green-logo-transparent.png"/>
+    <i class="fas fa-bars"></i>
+  </nav>
+  <div id="homepage">
+    <div id="blackout">
+      <h1>3 BEERS DEEP</h1>
+    </div>
+  </div>
+  <main>
+    <div id="message">
+      <h1>We are a 5 members playing covers of your favorite 90's grunge and alt-rock hits, along with some originals of our own.</h1>
+      <div class="flex">
+        <img src="images/austin.jpg"></img>
+        <img src="images/dave.jpg"></img>
+        <img src="images/will.jpg"></img>
+        <img src="images/quentin.jpg"></img>
+        <img src="images/show2.jpg" id="spanme"></img>
+      </div>
+      <h1>Check us out on <span id="green">Spotify</span></h1>
+      <i class="fab fa-spotify"></i>
+      <iframe src="https://open.spotify.com/embed/artist/3GZtZtRijc6GyLkNwAlixZ" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </div>
+    <div id="contact">
+      <h1>CONTACT US</h1>
+      <h2>Book a show or just leave a message.</h2>
+      <form action="" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="user_name">
+        <label for="mail">E-mail:</label>
+        <input type="email" id="mail" name="user_email">
+        <label for="msg">Message:</label>
+        <textarea id="msg" name="user_message"></textarea>
+        <div class="button">
+          <button type="submit">SUBMIT</button>
+        </div>
+      </form>
+    </div>
+  </main>
+    <footer>
+      <div id="whiteout">
+        <div id="social-media">
+          <img src="images/green-logo-transparent.png"/>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-spotify"></i>
+          <h3>Copyright 2019</h3>
+          <h3>Made with love by: <span><a href="https://baileypownell.com/">Bailey</a></span></h3>
+
+        </div>
+        <iframe src="https://open.spotify.com/follow/1/?uri=spotify:artist:3GZtZtRijc6GyLkNwAlixZ&size=detail&theme=light" width="250" height="60" scrolling="no" frameborder="0" style="border:2px solid #18d860;"  allowtransparency="true"></iframe>
+      </div>
+    </footer>
+    <script type="text/javascript">
+    // function that increases background color to pitch black on scroll
+
+window.addEventListener('scroll', function(e) {
+  const blackout = document.querySelector('#blackout');
+  const whiteout = document.querySelector('#whiteout');
+  var scrolled = window.pageYOffset;
+  blackout.style.backgroundColor = 'rgba(0, 0, 0, ' + (0+(scrolled/500));
+});
+    </script>
+</body>
