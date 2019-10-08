@@ -7,7 +7,7 @@
   <meta name="author" content="Bailey Pownell">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Three Beers Deep: Alt rock grunge band from Peru, Indiana</title>
-  <link rel="icon" href="images/logo.jpg">
+  <link rel="icon" href="./images/green-logo-transparent.jpg">
   <meta name="description" content="Alt rock grunge band from Peru, Indiana">
   <meta name="image" property="og:image" content="images/code.jpg">
   <!-- <link rel="stylesheet" href="css/normalize.css"> -->
@@ -21,27 +21,40 @@
   <nav>
     <img src="images/green-logo-transparent.png"/>
     <i class="fas fa-bars"></i>
+    <ul>
+      <i class="far fa-times-circle"></i>
+      <li><a href="#about">ABOUT</a></li>
+      <li><a href="#listen">LISTEN</a></li>
+      <li><a href="#contact">CONTACT</a></li>
+    </ul>
   </nav>
   <div id="homepage">
     <div id="blackout">
-      <h1>3 BEERS DEEP</h1>
+      <h1>3 BEERS <br/><span><span>DEE</span>P</span></h1>
     </div>
   </div>
   <main>
     <div id="message">
-      <h1>We are a 5 members playing covers of your favorite 90's grunge and alt-rock hits, along with some originals of our own.</h1>
-      <div class="flex">
-        <img src="images/austin.jpg"></img>
-        <img src="images/dave.jpg"></img>
-        <img src="images/will.jpg"></img>
-        <img src="images/quentin.jpg"></img>
-        <img src="images/show2.jpg" id="spanme"></img>
+      <a name="message"></a>
+      <h1 class="fade">We are a 5 members playing covers of your favorite 90's grunge and alt-rock hits, along with some originals of our own.</h1>
+      <div class="grid">
+        <div id="austin" class="hidden"></div>
+        <div id="dave" class="hidden"></div>
+        <div id="will" class="hidden"></div>
+        <div id="quentin" class="hidden"></div>
+        <div id="show2" class="hidden"></div>
       </div>
-      <h1>Check us out on <span id="green">Spotify</span></h1>
-      <i class="fab fa-spotify"></i>
-      <iframe src="https://open.spotify.com/embed/artist/3GZtZtRijc6GyLkNwAlixZ" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      <a name="listen"></a>
+      <div id="spotify">
+        <div>
+          <h1 class="hidden">Check us out on <span>Spotify</span></h1>
+          <a target="_blank" href="https://open.spotify.com/artist/3GZtZtRijc6GyLkNwAlixZ?si=UwvbtHtSQP6kw0FPW85AGw"><i class="fab fa-spotify"></i></a>
+        </div>
+        <iframe class="hidden" src="https://open.spotify.com/embed/artist/3GZtZtRijc6GyLkNwAlixZ" width="370" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      </div>
     </div>
-    <div id="contact">
+    <div id="contact" class="fade">
+      <a name="contact"></a>
       <h1>CONTACT US</h1>
       <h2>Book a show or just leave a message.</h2>
       <form action="" method="post">
@@ -58,27 +71,18 @@
     </div>
   </main>
     <footer>
-      <div id="whiteout">
-        <div id="social-media">
+      <div id="whiteout" >
+        <div id="social-media" class="fade">
           <img src="images/green-logo-transparent.png"/>
-          <i class="fab fa-instagram"></i>
-          <i class="fab fa-facebook-f"></i>
-          <i class="fab fa-spotify"></i>
+          <a href="https://www.instagram.com/3beersdeepband/" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/3BeersDeepBand/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://open.spotify.com/artist/3GZtZtRijc6GyLkNwAlixZ?si=UwvbtHtSQP6kw0FPW85AGw"><i class="fab fa-spotify"></i></a>
           <h3>Copyright 2019</h3>
-          <h3>Made with love by: <span><a href="https://baileypownell.com/">Bailey</a></span></h3>
+          <h3><a target="_blank" href="https://baileypownell.com/">Made with <i class="fas fa-heart"></i> by Bailey</a></h3>
 
         </div>
         <iframe src="https://open.spotify.com/follow/1/?uri=spotify:artist:3GZtZtRijc6GyLkNwAlixZ&size=detail&theme=light" width="250" height="60" scrolling="no" frameborder="0" style="border:2px solid #18d860;"  allowtransparency="true"></iframe>
       </div>
     </footer>
-    <script type="text/javascript">
-    // function that increases background color to pitch black on scroll
-
-window.addEventListener('scroll', function(e) {
-  const blackout = document.querySelector('#blackout');
-  const whiteout = document.querySelector('#whiteout');
-  var scrolled = window.pageYOffset;
-  blackout.style.backgroundColor = 'rgba(0, 0, 0, ' + (0+(scrolled/500));
-});
-    </script>
+    <script type="text/javascript" src="js/main.js"></script>
 </body>

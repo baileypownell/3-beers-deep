@@ -1,0 +1,41 @@
+.is-visible {
+  -webkit-transform:translateX(0);
+  -ms-transform:translateX(0);
+  transform:translateX(0);
+  opacity:1
+}
+
+.fade {
+  opacity: 0;
+  transform: translateY(50px);
+  transition-property: translate opacity;
+  transition-duration: 1s;
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+
+  /* For JS Animations */
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      -webkit-transform: scale(0.5, 0.5);
+      -ms-transform: scale(0.5, 0.5);
+      transform: scale(0.5, 0.5);
+    }
+    /* from {opacity: 0; transform: scale(.7,.7)} */
+    to {
+      opacity: 1;
+    }
+    }
+
+  .fade-in-element {
+    animation: fade-in 1.8s;
+  }
+
+  .hidden {
+    opacity: 0;
+  }

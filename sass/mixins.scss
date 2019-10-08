@@ -1,0 +1,14 @@
+@mixin tiled-image {
+  background-color: $green;
+  width: 100%;
+  height: 50vh;
+  background-position: center;
+  background-size: cover;
+}
+
+@mixin flex-centering {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}

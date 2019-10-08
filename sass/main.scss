@@ -1,3 +1,6 @@
+@import 'mixins';
+@import 'colors';
+@import 'class-effects';
 
 * {
   box-sizing: border-box;
@@ -17,12 +20,8 @@ body {
   position: relative;
 }
 
-#blackout h1 {
-  font-size: 70px;
-  font-family: 'Rubik Mono One', sans-serif;
-  color: rgba(255, 255, 255, 0.7);
-}
 nav {
+
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -35,11 +34,57 @@ nav {
     width: 80px;
     height: 80px;
   }
-  i {
+  > i {
     font-size: 40px;
     cursor: pointer;
     color: black;
     padding-right: 15px;
+  }
+  ul {
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 105vw;
+    height: 100vh;
+    text-align: center;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    -webkit-transform:translateY(2000px);
+    -ms-transform:translateY(2000px);
+    transform:translateY(2000px);
+    opacity:0;
+    i {
+      color: white;
+      z-index: 1000;
+      font-size: 40px;
+      position: absolute;
+      right: 130px;
+      top: 20px;
+      text-shadow: 3px 3px 30px white;
+      cursor: pointer;
+      transition: all .5s;
+      &:hover {
+        color: lighten(green, 50%);
+        text-shadow: 5px 5px 20px lighten(green, 50%);
+      }
+    }
+    li {
+      text-decoration: none;
+      list-style-type: none;
+      padding: 40px;
+      font-size: 25px;
+      letter-spacing: 7px;
+      text-shadow: 5px 5px 15px white;
+      transition: all .5s;
+      &:hover {
+        letter-spacing: 15px;
+        color: lighten(green, 50%);
+        text-shadow: 5px 5px 20px lighten(green, 50%);
+      }
+    }
   }
 }
 
@@ -52,7 +97,7 @@ main {
 #homepage {
   width: 100vw;
   height: 100vh;
-  background-image: linear-gradient(120deg, rgba(247, 59, 0, 0.2), rgba(197, 0, 208, 0.5)), url("https://res.cloudinary.com/djad06sng/image/upload/v1570454434/show.jpg");
+  background-image:url("https://res.cloudinary.com/djad06sng/image/upload/v1570454434/show.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -60,36 +105,67 @@ main {
 
 #blackout {
   width: 100%;
+  // backdrop-filter: brightness(150%);
   height: 100%;
   background-color: rgba(0, 0, 0, 0.0);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  @include flex-centering;
+  h1 {
+    font-size: 40px;
+    font-family: 'Rubik Mono One', sans-serif;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  span {
+    font-size: 80px;
+    color: white;
+    span {
+      letter-spacing: 30px;
+    }
+  }
 }
 
 #message {
-  h1 {
-    padding: 5vw;
+  > h1 {
+    padding: 5vw 0;
+    width: 90%;
+    margin: 0 auto;
   }
   i {
-    color: #18d860;
+    color: $green;
     font-size: 10vw;
     display: block;
     padding: 30px;
   }
-  .flex {
+  .grid {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    img {
-      max-width: 250px;
-    }
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    padding-bottom: 5vh;
   }
-  #spanme {
-    flex-grow: 1;
-  }
+}
+
+#austin {
+  background-image: url("../images/austin.jpg");
+  @include tiled-image;
+}
+#dave {
+  background-image: url("../images/dave.jpg");
+  @include tiled-image;
+}
+#will {
+  background-image: url("../images/will.jpg");
+  @include tiled-image;
+}
+#quentin {
+  background-image: url("../images/quentin.jpg");
+  @include tiled-image;
+}
+#show2 {
+  background-image: url("../images/show2.jpg");
+  width: 200%;
+  height: 300px;
+  background-position: center;
+  background-size: cover;
 }
 
 #contact h1, h2 {
@@ -122,7 +198,7 @@ button {
   border: 2px solid white;
   padding: 15px 25px;
   color: white;
-  background-color: #18d860;
+  background-color: $green;
   cursor: pointer;
   font-size: 25px;
   margin: 15px;
@@ -130,13 +206,13 @@ button {
   &:hover {
     transform: scale(1.1);
     background-color: black;
-    color: #18d860;
-    border-color: #18d860;
+    color: $green;
+    border-color: $green;
   }
 }
 
-#green {
-  color: #18d860;
+#spotify > div > h1 > span {
+  color: $green;
 }
 
 #whiteout {
@@ -148,6 +224,7 @@ button {
 }
 
 footer {
+  background-color: $green;
   background-image: url("https://res.cloudinary.com/djad06sng/image/upload/v1570457001/caleb-george-pH88tHG-1yw-unsplash.jpg");
   background-attachment: fixed;
   background-position: bottom;
@@ -170,7 +247,7 @@ footer {
       margin: 0 5px 0 0;
       transition: color .3s;
       &:hover {
-          color: #18d860;
+          color: $green;
       }
     }
     h3 {
@@ -183,29 +260,49 @@ footer {
 }
 
 @media screen and (min-width: 600px) {
-  #message .flex {
-    width: 75%;
-    margin: 0 auto;
-    flex-direction: row;
-    flex-wrap: wrap;
-    img {
-      max-width: 300px;
-    }
-    #spanme {
-      flex-grow: 2;
+  #message > h1 {
+    width: 70%;
+  }
+  #blackout span {
+    font-size: 130px;
+    span {
+      letter-spacing: 40px;
     }
   }
-  #message h1 {
-    padding: 5vw 20vw;
+}
+
+@media screen and (min-width: 800px) {
+  #message > h1 {
+    width: 50%;
   }
-  #message {
+
+  #message .grid {
     grid-template-columns: repeat(4, 1fr);
-    img {
-      max-width: 300px;
-    }
+    padding: 5vw 15vw;
   }
+
+  #show2 {
+    width: 400%;
+    height: 450px;
+  }
+
+  #spotify h1 {
+    padding: 25px 5vw;
+  }
+  #spotify {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  form {
+    width: 60%;
+  }
+
   #blackout h1 {
     font-size: 150px;
+  }
+  #blackout span {
+    font-size: 200px;
   }
   #whiteout {
     display: flex;
@@ -213,5 +310,13 @@ footer {
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
+  }
+  footer {
+    #social-media {
+      text-align: left;
+      img {
+        margin: 10px 0;
+      }
+    }
   }
 }
