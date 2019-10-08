@@ -56,6 +56,7 @@ nav {
     -ms-transform:translateY(2000px);
     transform:translateY(2000px);
     opacity:0;
+    transition: all .4s;
     i {
       color: white;
       z-index: 1000;
@@ -100,7 +101,6 @@ main {
   background-image:url("https://res.cloudinary.com/djad06sng/image/upload/v1570454434/show.jpg");
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
 }
 
 #blackout {
@@ -226,7 +226,6 @@ button {
 footer {
   background-color: $green;
   background-image: url("https://res.cloudinary.com/djad06sng/image/upload/v1570457001/caleb-george-pH88tHG-1yw-unsplash.jpg");
-  background-attachment: fixed;
   background-position: bottom;
   background-size: cover;
   #social-media {
