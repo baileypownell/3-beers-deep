@@ -17,6 +17,10 @@
   transform: translateY(0px);
 }
 
+.hideOverflow {
+  overflow: hidden;
+}
+
 
   /* For JS Animations */
   @keyframes fade-in {

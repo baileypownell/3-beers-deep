@@ -1,24 +1,26 @@
-.confirmation {
+@import 'mixins';
+
+#confirmation {
   width: 100vw;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
   background-color: white;
   color: black;
   font-family: 'Big Shoulders Text', cursive;
-  transition: opacity, transform .4s;
-  opacity: 0;
+  flex-direction: column;
   transform: scale(0);
+  transition: transform .5s;
+  @include flex-centering;
   h1 {
     font-size: 30px;
   }
   h2 {
     font-size: 20px;
   }
+  i {
+    font-size: 40px;
+    cursor: pointer;
+  }
 }
 
 .showConfirmation {
-  opacity: 1;
   transform: scale(1);
 }

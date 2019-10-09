@@ -1,3 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-
+  scalable=yes">
+  <meta name="author" content="Bailey Pownell">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Three Beers Deep: Alt rock grunge band from Peru, Indiana</title>
+  <link rel="icon" href="images/green-logo-transparent.png">
+  <meta name="description" content="Alt rock grunge band from Peru, Indiana">
+  <meta name="image" property="og:image" content="images/green-logo-transparent.jpg">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Big+Shoulders+Text|Rubik+Mono+One&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/83f61b13a6.js" crossorigin="anonymous"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+</head>
+<body>
+  <nav>
+    <img src="images/green-logo-transparent.png"/>
+    <i class="fas fa-bars"></i>
+    <ul>
+      <i class="far fa-times-circle"></i>
+      <li><a href="#about">ABOUT</a></li>
+      <li><a href="#listen">LISTEN</a></li>
+      <li><a href="#contact">CONTACT</a></li>
+    </ul>
+  </nav>
+  <div id="homepage" class="parallax">
+    <div id="blackout">
+      <h1>3 BEERS <br/><span><span>DEE</span>P</span></h1>
+    </div>
+  </div>
+  <main>
+    <div id="message">
+      <a name="message"></a>
+      <h1 class="fade">We are a 4 members playing covers of your favorite 90's grunge and alt-rock hits, along with some originals of our own.</h1>
+      <div class="grid">
+        <div id="austin" class="hidden"></div>
+        <div id="dave" class="hidden"></div>
+        <div id="will" class="hidden"></div>
+        <div id="quentin" class="hidden"></div>
+        <div id="show2" class="hidden"></div>
+      </div>
+      <a name="listen"></a>
+      <div id="spotify">
+        <div>
+          <h1 class="hidden">Check us out on <span>Spotify</span></h1>
+          <a target="_blank" href="https://open.spotify.com/artist/3GZtZtRijc6GyLkNwAlixZ?si=UwvbtHtSQP6kw0FPW85AGw"><i class="fab fa-spotify"></i></a>
+        </div>
+        <iframe class="hidden" src="https://open.spotify.com/embed/artist/3GZtZtRijc6GyLkNwAlixZ" width="370" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      </div>
+    </div>
+    <div id="contact" class="fade">
+      <a name="contact"></a>
+      <h1>CONTACT US</h1>
+      <h2>Book a show or just leave a message.</h2>
+      <form method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="user_name">
+        <label for="mail">E-mail:</label>
+        <input type="email" name="user_email">
+        <label for="msg">Message:</label>
+        <textarea id="msg" name="user_message"></textarea>
+        <div class="button">
+          <button type="submit" name="submit">SUBMIT</button>
+        </div>
+      </form>
+    </div>
+  </main>
+    <footer>
+      <div id="whiteout" >
+        <div id="social-media" class="fade">
+          <img src="images/green-logo-transparent.png"/>
+          <a href="https://www.instagram.com/3beersdeepband/" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/3BeersDeepBand/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://open.spotify.com/artist/3GZtZtRijc6GyLkNwAlixZ?si=UwvbtHtSQP6kw0FPW85AGw"><i class="fab fa-spotify"></i></a>
+          <h3>Copyright 2019</h3>
+          <h3><a target="_blank" href="https://baileypownell.com/">Made with <i class="fas fa-heart"></i> by Bailey</a></h3>
+        </div>
+        <iframe src="https://open.spotify.com/follow/1/?uri=spotify:artist:3GZtZtRijc6GyLkNwAlixZ&size=detail&theme=light" width="250" height="60" scrolling="no" frameborder="0" style="border:2px solid #18d860;"  allowtransparency="true"></iframe>
+      </div>
+    </footer>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
+
 <?php
 
 //var_dump($_POST);
@@ -21,9 +109,13 @@ if (isset($_POST["submit"])) {
     $mail->SMTPAuth = TRUE;
     $mail->SMTPSecure = 'tls';
     $mail->Username = 'bailey.pownell@gmail.com';
-    $mail->Password='';
+    $mail->Password='Epluribusunum1776';
     $mail->Port=587;
     $mail->send();
+    ?> <script src="./js/popup.js">
+      displayConfirmation();
+    </script>
+    <?php
   }
   catch (Exception $e)
   {
@@ -38,91 +130,3 @@ if (isset($_POST["submit"])) {
 }
 
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-
-  scalable=yes">
-  <meta name="author" content="Bailey Pownell">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Three Beers Deep: Alt rock grunge band from Peru, Indiana</title>
-  <link rel="icon" href="./images/green-logo-transparent.jpg">
-  <meta name="description" content="Alt rock grunge band from Peru, Indiana">
-  <meta name="image" property="og:image" content="images/code.jpg">
-  <!-- <link rel="stylesheet" href="css/normalize.css"> -->
-  <link rel="stylesheet" href="css/main.css">
-  <link href="https://fonts.googleapis.com/css?family=Big+Shoulders+Text|Rubik+Mono+One&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/83f61b13a6.js" crossorigin="anonymous"></script>
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-</head>
-<body>
-  <nav>
-    <img src="images/green-logo-transparent.png"/>
-    <i class="fas fa-bars"></i>
-    <ul>
-      <i class="far fa-times-circle"></i>
-      <li><a href="#about">ABOUT</a></li>
-      <li><a href="#listen">LISTEN</a></li>
-      <li><a href="#contact">CONTACT</a></li>
-    </ul>
-  </nav>
-  <div id="homepage" class="parallax">
-    <div id="blackout">
-      <h1>3 BEERS <br/><span><span>DEE</span>P</span></h1>
-    </div>
-  </div>
-  <main>
-    <div id="message">
-      <a name="message"></a>
-      <h1 class="fade">We are a 5 members playing covers of your favorite 90's grunge and alt-rock hits, along with some originals of our own.</h1>
-      <div class="grid">
-        <div id="austin" class="hidden"></div>
-        <div id="dave" class="hidden"></div>
-        <div id="will" class="hidden"></div>
-        <div id="quentin" class="hidden"></div>
-        <div id="show2" class="hidden"></div>
-      </div>
-      <a name="listen"></a>
-      <div id="spotify">
-        <div>
-          <h1 class="hidden">Check us out on <span>Spotify</span></h1>
-          <a target="_blank" href="https://open.spotify.com/artist/3GZtZtRijc6GyLkNwAlixZ?si=UwvbtHtSQP6kw0FPW85AGw"><i class="fab fa-spotify"></i></a>
-        </div>
-        <iframe class="hidden" src="https://open.spotify.com/embed/artist/3GZtZtRijc6GyLkNwAlixZ" width="370" height="300" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-      </div>
-    </div>
-    <div id="contact" class="fade">
-      <a name="contact"></a>
-      <h1>CONTACT US</h1>
-      <h2>Book a show or just leave a message.</h2>
-      <form action="index.php" method="POST">
-        <label for="name">Name:</label>
-        <input type="text" name="user_name">
-        <label for="mail">E-mail:</label>
-        <input type="email" name="user_email">
-        <label for="msg">Message:</label>
-        <textarea id="msg" name="user_message"></textarea>
-        <div class="button">
-          <button type="submit" name="submit">SUBMIT</button>
-        </div>
-      </form>
-    </div>
-  </main>
-    <footer>
-      <div id="whiteout" >
-        <div id="social-media" class="fade">
-          <img src="images/green-logo-transparent.png"/>
-          <a href="https://www.instagram.com/3beersdeepband/" target="_blank"><i class="fab fa-instagram"></i></a>
-          <a href="https://www.facebook.com/3BeersDeepBand/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://open.spotify.com/artist/3GZtZtRijc6GyLkNwAlixZ?si=UwvbtHtSQP6kw0FPW85AGw"><i class="fab fa-spotify"></i></a>
-          <h3>Copyright 2019</h3>
-          <h3><a target="_blank" href="https://baileypownell.com/">Made with <i class="fas fa-heart"></i> by Bailey</a></h3>
-
-        </div>
-        <iframe src="https://open.spotify.com/follow/1/?uri=spotify:artist:3GZtZtRijc6GyLkNwAlixZ&size=detail&theme=light" width="250" height="60" scrolling="no" frameborder="0" style="border:2px solid #18d860;"  allowtransparency="true"></iframe>
-      </div>
-    </footer>
-    <script type="text/javascript" src="js/main.js"></script>
-</body>
