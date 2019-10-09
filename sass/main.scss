@@ -43,8 +43,8 @@ nav {
   ul {
     position: absolute;
     top: 0;
-    left: -50px;
-    width: 105vw;
+    left: 0px;
+    width: 100vw;
     height: 100vh;
     text-align: center;
     background-color: black;
@@ -62,7 +62,6 @@ nav {
       z-index: 1000;
       font-size: 40px;
       position: absolute;
-      right: 130px;
       top: 20px;
       text-shadow: 3px 3px 30px white;
       cursor: pointer;

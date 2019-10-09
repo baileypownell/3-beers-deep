@@ -20,6 +20,13 @@ for (let i = 0; i < navOptions.length; i++) {
   });
 }
 
+// email confirmation popup
+const confirmation = `<div class="confirmation"><h1>Thanks!</h1><br/><h2>Your email has been sent.</h2><i class="far fa-times-circle"></i></div>`;
+// change transform and opacity once email has been sent
+const displayConfirmation = () => {
+  confirmation.classList.add('showConfirmation');
+}
+// remove 'showConfirmation' when the close button is clicked
 
 // animations for fading in and resizing: https://eddyerburgh.me/animate-elements-scrolled-view-vanilla-js
 
@@ -77,7 +84,7 @@ const scrollAppear = () => {
 const parallax = () => {
   let wScroll = window.pageYOffset;
   Array.from(document.getElementsByClassName('parallax'))[0].style.backgroundPosition =  'center '+(wScroll*-0.5)+'px';
-  document.querySelector('footer').style.backgroundPosition = 'center ' +(wScroll/2)+'px';
+  // document.querySelector('footer').style.backgroundPosition = 'center ' +(wScroll/0.5)+'px';
 }
 
 
