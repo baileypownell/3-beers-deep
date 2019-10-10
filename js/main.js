@@ -7,16 +7,15 @@
 
   hamburger.addEventListener('click', () => {
     ul.classList.add('is-visible');
+    document.querySelector('body').classList.add('hideOverflow');
   });
 
   closeIcon.addEventListener('click', () => {
     ul.classList.remove('is-visible');
+    document.querySelector('body').classList.remove('hideOverflow');
   });
 
-  //disable scrolling when a popup is open
-  if (ul.classList.contains('is-visible')) {
-    document.querySelector('body').style.overflow = 'hidden';
-  }
+
 
   //function to close navigation menu after an option is selected
   let navOptions = document.querySelectorAll('ul');
@@ -102,4 +101,17 @@
 
   window.addEventListener('scroll', windowEvents);
 
+  // ajax function
+  $('form').submit(function(event){
+    event.preventDefault();
+      $.ajax({
+        type: 'POST',
+        url: 'process.php',
+        data: $('form').serialize(),
+        success: function () {
+          document.querySelector('.confirmation').setAttribute("id", "showConfirmation");
+        }
+      });
+
+    });
 // })();
