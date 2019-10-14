@@ -15,23 +15,14 @@
     document.querySelector('body').classList.remove('hideOverflow');
   });
 
-
-
   //function to close navigation menu after an option is selected
   let navOptions = document.querySelectorAll('ul');
   for (let i = 0; i < navOptions.length; i++) {
     navOptions[i].addEventListener('click', () => {
       ul.classList.remove('is-visible');
+      document.querySelector('body').classList.remove('hideOverflow');
     });
   }
-
-
-
-  // remove 'showConfirmation' when the close button is clicked
-  //closeConfirmation.addEventListener('click', () => {
-  //   confirmation.classList.remove('showConfirmation');
-  // });
-
 
   // animations for fading in and resizing: https://eddyerburgh.me/animate-elements-scrolled-view-vanilla-js
 
@@ -89,9 +80,7 @@
   const parallax = () => {
     let wScroll = window.pageYOffset;
     Array.from(document.getElementsByClassName('parallax'))[0].style.backgroundPosition =  'center '+(wScroll*-0.2)+'px';
-    // document.querySelector('footer').style.backgroundPosition = 'center ' +(wScroll/0.5)+'px';
   }
-
 
   const windowEvents = () => {
     scrollAppear();
