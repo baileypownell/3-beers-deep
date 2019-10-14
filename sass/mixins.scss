@@ -13,3 +13,30 @@
   justify-content: center;
   text-align: center;
 }
+
+@mixin footer-icons {
+  color: black;
+  cursor: pointer;
+  font-size: 30px;
+  margin: 0 5px 0 0;
+  transition: color .3s;
+}
+
+@mixin button {
+  border: 2px solid white;
+  padding: 15px 25px;
+  color: white;
+  background-color: $green;
+  cursor: pointer;
+  font-size: 25px;
+  margin: 40px 15px;
+  transition: all .4s;
+  &:hover {
+    -webkit-transform: scale(1.1);
+    -ms-transform:scale(1.1);
+    transform: scale(1.1);
+    background-color: black;
+    color: $green;
+    border-color: $green;
+  }
+}

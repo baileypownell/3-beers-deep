@@ -1,1 +1,1 @@
-.confirmation{width:100vw;background-color:white;color:black;font-family:'Big Shoulders Text', cursive;font-size:30px;padding:20px 0;transition:transform .4s;transform:scale(0)}#showConfirmation{-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1)}
+.confirmation{width:100vw;background-color:white;color:black;font-family:'Big Shoulders Text', cursive;font-size:30px;padding:20px 0;transition:transform .4s;transform:scale(0);-webkit-transform:scale(0);-ms-transform:scale(0)}#showConfirmation{-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1)}

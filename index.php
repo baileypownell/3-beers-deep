@@ -29,7 +29,7 @@
   </nav>
   <div id="homepage" class="parallax">
     <div id="blackout">
-      <h1>3 BEERS <br/><span><span>DEE</span>P</span></h1>
+      <h1><span id="3">3</span> <br/><span id="beers">BEERS</span> <br/><span id="deep"><span>DEE</span>P</span></h1>
     </div>
   </div>
   <main>
@@ -39,7 +39,7 @@
       <div class="grid">
         <div id="austin" class="hidden"></div>
         <div id="dave" class="hidden"></div>
-        <div id="will" class="hidden"></div>
+        <div id="me" class="hidden"></div>
         <div id="quentin" class="hidden"></div>
         <div id="show2" class="hidden"></div>
       </div>
@@ -58,11 +58,11 @@
       <h2>Book a show or just leave a message.</h2>
       <form method="POST">
         <label for="name">Name:</label>
-        <input type="text" name="user_name" required>
+        <input type="text" name="user_name" required maxlength="40">
         <label for="mail">E-mail:</label>
         <input type="email" name="user_email" required>
         <label for="msg">Message:</label>
-        <textarea id="msg" name="user_message" required></textarea>
+        <textarea id="msg" name="user_message" required maxlength="200"></textarea>
         <div class="button">
           <button type="submit" name="submit">SUBMIT</button>
         </div>
