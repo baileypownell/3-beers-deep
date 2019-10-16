@@ -1,9 +1,8 @@
 
 const path = require('path');
-const config = {
+module.exports = {
   // Entry
-  entry: {'./js/main.js'},
-
+  entry: './src/js/main.js',
   // Output
   output: {
     path: path.resolve(__dirname, './public'),
