@@ -88,6 +88,6 @@
 			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
 			  crossorigin="anonymous">
     </script>
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="public/js/main.js"></script>
 </body>
 </html>
