@@ -1,0 +1,45 @@
+/* CSS specific to IE 10 and 11 */
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  nav {
+    z-index: 100;
+    i {
+      position: absolute;
+      top: 22px;
+      right: 15px;
+    }
+  }
+  #message .grid {
+    display: block;
+    position: relative;
+  }
+  #message .grid:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  #austin,
+  #dave,
+  #will,
+  #quentin {
+    width: 50%!important;
+    display:inline-block;
+    float: right;
+    @media (min-width: 630px) {
+      width: 25%!important;
+    }
+  }
+  #show2 {
+    width: 100%!important;
+    float: right;
+  }
+  #spotify {
+    display: block;
+    iframe {
+      height: 0px;
+    }
+  }
+  #spotify > div > h1 {
+    width: 100vw;
+  }
+}

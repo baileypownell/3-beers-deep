@@ -39,7 +39,7 @@
       <div class="grid">
         <div id="austin" class="hidden"></div>
         <div id="dave" class="hidden"></div>
-        <div id="me" class="hidden"></div>
+        <div id="will" class="hidden"></div>
         <div id="quentin" class="hidden"></div>
         <div id="show2" class="hidden"></div>
       </div>
@@ -83,6 +83,8 @@
         <iframe src="https://open.spotify.com/follow/1/?uri=spotify:artist:3GZtZtRijc6GyLkNwAlixZ&size=detail&theme=light" width="250" height="60" scrolling="no" frameborder="0" style="border:2px solid #18d860;"  allowtransparency="true"></iframe>
       </div>
     </footer>
+    <!-- for using array.from() in IE11 -->
+    <script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=Array.from"></script>
     <script
 			  src="https://code.jquery.com/jquery-3.4.1.min.js"
 			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
